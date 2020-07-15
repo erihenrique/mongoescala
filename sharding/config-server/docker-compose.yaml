@@ -8,7 +8,7 @@ services:
     image: mongo
     command: mongod --configsvr --replSet cfgrs --port 27017 --dbpath /data/db
     ports:
-      - 40001:27017
+      - 27017:27017
     volumes:
       - cfgsvr1:/data/db
 
@@ -17,7 +17,7 @@ services:
     image: mongo
     command: mongod --configsvr --replSet cfgrs --port 27017 --dbpath /data/db
     ports:
-      - 40002:27017
+      - 27018:27017
     volumes:
       - cfgsvr2:/data/db
 
@@ -26,7 +26,7 @@ services:
     image: mongo
     command: mongod --configsvr --replSet cfgrs --port 27017 --dbpath /data/db
     ports:
-      - 40003:27017
+      - 27019:27017
     volumes:
       - cfgsvr3:/data/db
 
