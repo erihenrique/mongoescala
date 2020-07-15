@@ -32,16 +32,16 @@ docker-compose -f shard1/docker-compose.yaml up -d
 ```
 Initiate replica set
 ```
-mongo mongodb://10.61.17.44:50001
+mongo mongodb://10.61.17.44:27017
 ```
 ```
 rs.initiate(
   {
     _id: "shard1rs",
     members: [
-      { _id : 0, host : "10.61.17.44:50001" },
-      { _id : 1, host : "10.61.17.44:50002" },
-      { _id : 2, host : "10.61.17.44:50003" }
+      { _id : 0, host : "10.61.17.44:27017" },
+      { _id : 1, host : "10.61.17.44:27018" },
+      { _id : 2, host : "10.61.17.44:27019" }
     ]
   }
 )
