@@ -7,7 +7,7 @@ docker-compose -f config-server/docker-compose.yaml up -d
 ```
 Initiate replica set
 ```
-mongo mongodb://192.168.1.81:40001
+mongo mongodb://10.61.17.43:40001
 ```
 ```
 rs.initiate(
@@ -15,9 +15,9 @@ rs.initiate(
     _id: "cfgrs",
     configsvr: true,
     members: [
-      { _id : 0, host : "192.168.1.81:40001" },
-      { _id : 1, host : "192.168.1.81:40002" },
-      { _id : 2, host : "192.168.1.81:40003" }
+      { _id : 0, host : "10.61.17.43:40001" },
+      { _id : 1, host : "10.61.17.43:40002" },
+      { _id : 2, host : "10.61.17.43:40003" }
     ]
   }
 )
@@ -32,16 +32,16 @@ docker-compose -f shard1/docker-compose.yaml up -d
 ```
 Initiate replica set
 ```
-mongo mongodb://192.168.1.81:50001
+mongo mongodb://10.61.17.44:50001
 ```
 ```
 rs.initiate(
   {
     _id: "shard1rs",
     members: [
-      { _id : 0, host : "192.168.1.81:50001" },
-      { _id : 1, host : "192.168.1.81:50002" },
-      { _id : 2, host : "192.168.1.81:50003" }
+      { _id : 0, host : "10.61.17.44:50001" },
+      { _id : 1, host : "10.61.17.44:50002" },
+      { _id : 2, host : "10.61.17.44:50003" }
     ]
   }
 )
