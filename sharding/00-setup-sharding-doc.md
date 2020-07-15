@@ -7,7 +7,7 @@ docker-compose -f config-server/docker-compose.yaml up -d
 ```
 Initiate replica set
 ```
-mongo mongodb://10.61.17.43:40001
+mongo mongodb://10.61.17.43:27017
 ```
 ```
 rs.initiate(
@@ -15,9 +15,9 @@ rs.initiate(
     _id: "cfgrs",
     configsvr: true,
     members: [
-      { _id : 0, host : "10.61.17.43:40001" },
-      { _id : 1, host : "10.61.17.43:40002" },
-      { _id : 2, host : "10.61.17.43:40003" }
+      { _id : 0, host : "10.61.17.43:27017" },
+      { _id : 1, host : "10.61.17.43:27018" },
+      { _id : 2, host : "10.61.17.43:27019" }
     ]
   }
 )
