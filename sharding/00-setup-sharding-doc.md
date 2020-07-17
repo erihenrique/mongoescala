@@ -58,7 +58,7 @@ docker-compose -f mongos/docker-compose.yaml up -d
 ### Add shard to the cluster
 Connect to mongos
 ```
-mongo mongodb://10.61.17.43:60000
+mongo mongodb://10.61.17.43:27017
 ```
 Add shard
 ```
@@ -92,7 +92,7 @@ rs.status()
 ### Add shard to the cluster
 Connect to mongos
 ```
-mongo mongodb://10.61.17.43:60000
+mongo mongodb://10.61.17.43:27017
 ```
 Add shard
 ```
@@ -127,7 +127,7 @@ rs.status()
 ### Add shard to the cluster
 Connect to mongos
 ```
-mongo mongodb://10.61.17.43:60000
+mongo mongodb://10.61.17.43:27017
 ```
 Add shard
 ```
