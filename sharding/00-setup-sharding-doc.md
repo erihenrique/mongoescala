@@ -1,11 +1,11 @@
-## Set up Sharding using Docker Containers
+## Configuirando um Sharding em MongoDB usando Docker Containers
 
 ### Config servers
-Start config servers (3 member replica set)
+Iniciar os config servers (3 member replica set)
 ```
 docker-compose -f config-server/docker-compose.yaml up -d
 ```
-Initiate replica set
+Iniciando a replica set
 ```
 mongo mongodb://10.61.17.43:27018
 ```
