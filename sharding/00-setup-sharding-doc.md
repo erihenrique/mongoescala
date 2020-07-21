@@ -27,6 +27,7 @@ rs.status()
 Verificar os config servers (3 member replica set)
 ```
 docker-compose -f config-server/docker-compose.yaml ps
+netstat -nltp
 ```
 
 ### Shard 1 servers
