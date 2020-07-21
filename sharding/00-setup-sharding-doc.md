@@ -24,6 +24,10 @@ rs.initiate(
 
 rs.status()
 ```
+Verificar os config servers (3 member replica set)
+```
+docker-compose -f config-server/docker-compose.yaml ps
+```
 
 ### Shard 1 servers
 Iniciar shard 1 servers (3 member replicas set)
